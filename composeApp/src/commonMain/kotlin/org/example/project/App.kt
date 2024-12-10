@@ -17,7 +17,7 @@ fun App() {
     var fromCurrency by remember { mutableStateOf("") }
     var toCurrency by remember { mutableStateOf("") }
     var amount by remember { mutableStateOf("") }
-    var result by remember { mutableStateOf(4.0) }
+    var result by remember { mutableStateOf(0.0) }
     var currencies by remember { mutableStateOf(listOf<String>()) }
     var showError by remember { mutableStateOf(false) }
     var filterText by remember { mutableStateOf("") }
@@ -59,6 +59,8 @@ fun App() {
                                 fromCurrency = currency
                                 expanded = false
                             }) {
+
+
                                 Text(text = currency)
                             }
                         }
